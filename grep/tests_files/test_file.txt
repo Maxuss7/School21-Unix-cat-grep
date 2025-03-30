@@ -1,0 +1,57 @@
+*GREP 8 BONUS -o
+if [ "$show_commands" = true ]; then
+echo  {grep -o "$pattern" "$filename1"}  {./s21_grep -o "$pattern" "$filename1"}
+fi
+diff <(grep -o "$pattern" "$filename1") <(./s21_grep -o "$pattern" "$filename1") -s $q
+# -------------------------------------------------
+echo "$decor" *GREP 9 BONUS -h with two files
+if [ "$show_commands" = true ]; then
+echo  {grep -h "$pattern" "$filename2" "$filename1"}  {./s21_grep -h "$pattern" "$filename2" "$filename1"}
+fi
+diff <(grep -h "$pattern" "$filename2" "$filename1") <(./s21_grep -h "$pattern" "$filename2" "$filename1") -s $q
+# -------------------------------------------------
+echo "$decor" *GREP 10 BONUS -s
+if [ "$show_commands" = true ]; then
+echo  {grep -s "$pattern"  aboba}  {./s21_grep -s "$pattern"  aboba}
+fi
+diff <(grep -s "$pattern" aboba) <(./s21_grep -s "$pattern"  aboba) -s $q
+# -------------------------------------------------
+echo "$decor" *GREP 11 BONUS -f
+if [ "$show_commands" = true ]; then
+echo  {grep -f "$filename3" "$filename2"}  {./s21_grep -f "$filename3" "$filename2"}
+fi
+diff <(grep -f "$filename3" "$filename2") <(./s21_grep -f "$filename3" "$filename2") -s $q
+# -------------------------------------------------
+echo "$decor" *GREP 12 BONUS -in
+if [ "$show_commands" = true ]; then
+echo  {grep -in "$pattern" "$filename1"}  {./s21_grep -in "$pattern" "$filename1"}
+fi
+diff <(grep -in "$pattern" "$filename1") <(./s21_grep -in "$pattern" "$filename1") -s $q
+# -------------------------------------------------
+echo "$decor" *GREP 13 BONUS -cv
+if [ "$show_commands" = true ]; then
+echo  {grep -cv "$pattern" "$filename1"}  {./s21_grep -cv "$pattern" "$filename1"}
+fi
+diff <(grep -cv "$pattern" "$filename1") <(./s21_grep -cv "$pattern" "$filename1") -s $q
+# -------------------------------------------------
+echo "$decor" *GREP 14 BONUS -iv
+if [ "$show_commands" = true ]; then
+echo  {grep -iv "$pattern" "$filename1"}  {./s21_grep -iv "$pattern" "$filename1"}
+fi
+diff <(grep -iv "$pattern" "$filename1") <(./s21_grep -iv "$pattern" "$filename1") -s $q
+# -------------------------------------------------
+echo "$decor" *GREP 15 BONUS -lv with three files
+if [ "$show_commands" = true ]; then
+echo  {grep -lv "$pattern" "$filename2" "$filename3" "$filename1"}  {./s21_grep -lv "$pattern" "$filename2" "$filename3" "$filename1"}
+fi
+diff <(grep -lv "$pattern" "$filename2" "$filename3" "$filename1") <(./s21_grep -lv "$pattern" "$filename2" "$filename3" "$filename1") -s $q
+# -------------------------------------------------
+echo "$decor" *GREP 16 BONUS -ho with two files
+if [ "$show_commands" = true ]; then
+echo  {grep -ho "$pattern" "$filename2" "$filename1"}  {./s21_grep -ho "$pattern" "$filename2" "$filename1"}
+fi
+diff <(grep -ho "$pattern" "$filename2" "$filename1") <(./s21_grep -ho "$pattern" "$filename2" "$filename1") -s $q
+# -------------------------------------------------
+echo "$decor" *GREP 17 BONUS -nf
+if [ "$show_commands" = true ]; then
+echo  {grep -nf "$filename3" "$filename2"}  {./s21_grep -nf "$filename3" "$filename2"}
