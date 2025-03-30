@@ -1,4 +1,4 @@
-# 🚀 s21_cat & s21_grep - Enhanced Unix Utilities
+# 🚀 s21_cat & s21_grep - Unix Utilities
 
 **My implementations of cat and grep tools in C**
 
