@@ -143,7 +143,7 @@ void process_file(Context *ctx, const char *fn) {
       }
 
       if (ctx->o && match) {
-        extract_matches(line, re, compiled, ctx, fn, lnum);  // Добавляем lnum
+        extract_matches(line, re, compiled, ctx, fn, lnum);
       }
     }
   }
@@ -181,7 +181,7 @@ void print_match_count(Context *ctx, const char *fn, int count) {
 }
 
 void extract_matches(const char *line, regex_t *re, int cnt, Context *ctx,
-                     const char *fn, int line_num) {  // Добавляем line_num
+                     const char *fn, int line_num) {
   regmatch_t match;
   const int print_name = !ctx->h && ctx->file_count > 1;
 
