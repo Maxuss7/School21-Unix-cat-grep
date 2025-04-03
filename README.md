@@ -100,7 +100,7 @@ make test
 ./s21_grep -l "pattern" project_files/*
 ```
 
-## 🧹 Cleaning Project Files (removes binaries)
+## 🧹 Cleaning Project
 
 ```bash
 make clean
